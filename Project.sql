@@ -469,7 +469,7 @@ GROUP BY C.BrandID,C.Brand_Name,C.Brand_Country
 ORDER BY LiczbaAut DESC
 GO
 --=============================================================================
---WIDOK NAPRAW KTÓRE NIE ZOSTA£Y UKOÑCZONE /
+--WIDOK NAPRAW KTÓRE NIE ZOSTA£Y UKOÑCZONE
 IF OBJECT_ID ( 'Not_finished_repairs', 'v' ) IS NOT NULL   
     DROP VIEW Not_finished_repairs;  
 GO
@@ -481,7 +481,7 @@ GO
 
 
 --=============================================================================
---WIDOK NAJCZÊŒCIEJ ŒWIADCZONEJ US£UGI /
+--WIDOK NAJCZÊŒCIEJ ŒWIADCZONEJ US£UGI
 IF OBJECT_ID ( 'Most_common_service', 'v' ) IS NOT NULL  
     DROP VIEW Most_common_service;
 GO
@@ -629,7 +629,7 @@ AS
 GO
 
 --====================================================================================
---PROCEDURA DODAJ¥CA NOWEGO PRACOWNIKA /
+--PROCEDURA DODAJ¥CA NOWEGO PRACOWNIKA
 
 
 IF OBJECT_ID('dbo.pAddWorker', 'P') IS NOT NULL
@@ -673,7 +673,7 @@ GO
 
 
 --====================================================================================
---PROCEDURA ZMIENIAJ¥CA OPIS US£UGI /
+--PROCEDURA ZMIENIAJ¥CA OPIS US£UGI
 
 
 IF OBJECT_ID('dbo.pUpdateServiceDescription', 'P') IS NOT NULL
@@ -735,7 +735,7 @@ PRINT 'Stawka zosta³a zaktualizowana'
 GO
 
 --====================================================================================
---TRIGGER WYSWIETLAJACY KOMUNIKAT O DODANIU NOWEJ NAPRAWY DO DZIENNIKA NAPRAW /
+--TRIGGER WYSWIETLAJACY KOMUNIKAT O DODANIU NOWEJ NAPRAWY DO DZIENNIKA NAPRAW
 IF OBJECT_ID('RepairTr','TR') IS NOT NULL
 	DROP TRIGGER RepairTr
 GO
@@ -747,7 +747,7 @@ PRINT 'Nowa naprawa zosta³a dodana'
 
 GO
 --====================================================================================
---TRIGGER WYSWIETLAJACY KOMUNIKAT O ZMIANIE OPISU NAPRAWY /
+--TRIGGER WYSWIETLAJACY KOMUNIKAT O ZMIANIE OPISU NAPRAWY
 IF OBJECT_ID('DescpritionTr','TR') IS NOT NULL
 	DROP TRIGGER DescpritionTr
 GO
@@ -760,7 +760,7 @@ PRINT 'Opis naprawy zosta³ zaktualizowany'
 GO
 
 --====================================================================================
---TRIGGER WYSWIETLAJACY KOMUNIKAT O ZMIANIE STANU NAPRAWY /
+--TRIGGER WYSWIETLAJACY KOMUNIKAT O ZMIANIE STANU NAPRAWY
 IF OBJECT_ID('StateTr','TR') IS NOT NULL
 	DROP TRIGGER StateTr
 GO
